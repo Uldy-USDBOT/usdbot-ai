@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- منع الترجمة التلقائية من جوجل -->
 <meta name="google" content="notranslate">
 
 <!-- ==================== SEO أساسي ==================== -->
@@ -13,7 +12,7 @@
 <meta name="author" content="USDBot AI - ULDY Protocol">
 <meta name="robots" content="index, follow, max-image-preview:large">
 
-<!-- ==================== Open Graph (مشاركة الروابط) ==================== -->
+<!-- ==================== Open Graph ==================== -->
 <meta property="og:title" content="ULDY PROTOCOL - النهضة الرقمية الليبية">
 <meta property="og:description" content="انضم إلى مرحلة التأسيس. سيولة وأمان عبر شبكة TRC20.">
 <meta property="og:type" content="website">
@@ -21,7 +20,6 @@
 <meta property="og:image" content="https://usdbot.ai/og-image.jpg">
 <meta property="og:locale" content="ar_LY">
 
-<!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="ULDY PROTOCOL - السيادة الرقمية">
 <meta name="twitter:description" content="انضم إلى المرحلة التأسيسية للعملة الليبية الرقمية.">
@@ -83,7 +81,6 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* منع الترجمة التلقائية على جميع العناصر */
 body, html, div, p, h1, h2, h3, h4, span, button {
   translate: no;
 }
@@ -116,7 +113,7 @@ header {
   color: var(--text-secondary);
 }
 
-/* ========== بطاقة السعر (زجاجية) ========== */
+/* ========== بطاقة السعر ========== */
 .price-card {
   background: var(--card-bg);
   backdrop-filter: var(--glass-blur);
@@ -157,7 +154,6 @@ header {
   gap: 8px;
 }
 
-/* شريط التقدم */
 .progress-container {
   margin-top: 25px;
   background: rgba(34, 34, 34, 0.6);
@@ -169,7 +165,7 @@ header {
 
 .progress-bar {
   background: linear-gradient(90deg, var(--primary), #00ffcc);
-  width: 40%; /* سيتم تحديثه ديناميكياً */
+  width: 40%;
   height: 100%;
   border-radius: 20px;
   box-shadow: 0 0 15px var(--primary);
@@ -189,7 +185,74 @@ header {
   font-weight: 600;
 }
 
-/* ========== صندوق المساهمة (زجاجي) ========== */
+/* ========== بيان ULDY ========== */
+.manifesto {
+  margin-top: 30px;
+  padding-top: 20px;
+}
+
+.manifesto h2 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #fff;
+}
+
+.manifesto > p {
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  color: var(--text-secondary);
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.feature-item {
+  background: rgba(21, 21, 21, 0.7);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255,255,255,0.03);
+  padding: 25px 20px;
+  border-radius: 20px;
+  transition: all 0.25s;
+  border-right: 4px solid var(--primary);
+  box-shadow: 0 10px 20px -5px rgba(0,0,0,0.3);
+}
+
+.feature-item:hover {
+  transform: translateY(-5px);
+  background: rgba(30, 30, 30, 0.8);
+  border-right-width: 6px;
+  box-shadow: 0 15px 25px -8px rgba(0,255,163,0.2);
+}
+
+.feature-item h4 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+  color: #fff;
+}
+
+.feature-item i {
+  color: var(--primary);
+  font-size: 1.5rem;
+  width: 28px;
+  text-align: center;
+}
+
+.feature-item p {
+  color: #b0b0b0;
+  line-height: 1.6;
+}
+
+/* ========== صندوق المساهمة (في الأسفل) ========== */
 .contribution-box {
   background: var(--card-bg);
   backdrop-filter: var(--glass-blur);
@@ -197,7 +260,7 @@ header {
   border: 1px solid var(--card-border);
   border-radius: 24px;
   padding: 30px;
-  margin: 30px 0;
+  margin-top: 50px;
   box-shadow: 0 15px 30px rgba(0,0,0,0.4);
 }
 
@@ -215,7 +278,6 @@ header {
   margin-bottom: 20px;
 }
 
-/* تحسين صندوق العنوان */
 .address-wrapper {
   display: flex;
   align-items: stretch;
@@ -285,75 +347,6 @@ header {
   margin-top: 20px;
 }
 
-/* ========== بيان ULDY ========== */
-.manifesto {
-  margin-top: 50px;
-  padding-top: 30px;
-  border-top: 1px solid rgba(255,255,255,0.05);
-}
-
-.manifesto h2 {
-  font-size: 2rem;
-  margin-bottom: 25px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  color: #fff;
-}
-
-.manifesto > p {
-  font-size: 1.1rem;
-  margin-bottom: 40px;
-  color: var(--text-secondary);
-}
-
-/* شبكة الميزات */
-.feature-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 25px;
-}
-
-.feature-item {
-  background: rgba(21, 21, 21, 0.7);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(255,255,255,0.03);
-  padding: 25px 20px;
-  border-radius: 20px;
-  transition: all 0.25s;
-  border-right: 4px solid var(--primary);
-  box-shadow: 0 10px 20px -5px rgba(0,0,0,0.3);
-}
-
-.feature-item:hover {
-  transform: translateY(-5px);
-  background: rgba(30, 30, 30, 0.8);
-  border-right-width: 6px;
-  box-shadow: 0 15px 25px -8px rgba(0,255,163,0.2);
-}
-
-.feature-item h4 {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-size: 1.3rem;
-  margin-bottom: 12px;
-  color: #fff;
-}
-
-.feature-item i {
-  color: var(--primary);
-  font-size: 1.5rem;
-  width: 28px;
-  text-align: center;
-}
-
-.feature-item p {
-  color: #b0b0b0;
-  line-height: 1.6;
-}
-
 /* ========== فوتر ========== */
 footer {
   margin-top: 70px;
@@ -396,10 +389,9 @@ footer a:hover {
   </header>
 
   <main translate="no">
-    <!-- بطاقة السعر -->
+    <!-- 1. بطاقة السعر -->
     <section class="price-card" translate="no">
       <div class="price-label">مرحلة التأسيس (GENESIS)</div>
-      <!-- يمكنك تعديل السعر هنا مباشرة أو عبر المتغير في JavaScript -->
       <div class="price-value" id="tokenPriceDisplay">$1.300000</div>
       <div class="price-trend">
         <i class="fas fa-chart-line"></i> 
@@ -415,24 +407,7 @@ footer a:hover {
       </div>
     </section>
 
-    <!-- صندوق المساهمة -->
-    <section class="contribution-box" translate="no">
-      <h3><i class="fas fa-hand-holding-usd" style="color: var(--primary);"></i> المساهمة في التأسيس (TRC20)</h3>
-      <p>أرسل USDT عبر شبكة TRC20 للمشاركة والحصول على ULDY.</p>
-      
-      <div class="address-wrapper">
-        <span class="address" id="walletAddr" translate="no">TSvW4XVmvY8cyvZdu3yFcbZyMsMW3dYYu8</span>
-        <button class="copy-icon-btn" id="copyButton">
-          <i class="far fa-copy"></i> نسخ العنوان
-        </button>
-      </div>
-      <div class="copy-feedback" id="copyFeedback"></div>
-      <div class="warning-note">
-        <i class="fas fa-exclamation-triangle"></i> تحذير: الشبكة هي TRC20 فقط. أي إرسال عبر شبكة أخرى سيؤدي لفقدان الأموال بشكل دائم.
-      </div>
-    </section>
-
-    <!-- بيان ULDY -->
+    <!-- 2. بيان ULDY والميزات -->
     <section class="manifesto" translate="no">
       <h2><i class="fas fa-scroll" style="color: var(--primary);"></i> بيان ULDY التأسيسي</h2>
       <p>ULDY ليست مجرد عملة رقمية؛ إنها حجر الزاوية لاقتصاد ليبي رقمي سيادي. مهمتنا توفير السيولة والشفافية والحرية المالية من خلال بروتوكول لامركزي صُمم للمستقبل.</p>
@@ -456,6 +431,23 @@ footer a:hover {
         </div>
       </div>
     </section>
+
+    <!-- 3. مربع المساهمة (في الأسفل بعد القراءة) -->
+    <section class="contribution-box" translate="no">
+      <h3><i class="fas fa-hand-holding-usd" style="color: var(--primary);"></i> المساهمة في التأسيس (TRC20)</h3>
+      <p>أرسل USDT عبر شبكة TRC20 للمشاركة والحصول على ULDY.</p>
+      
+      <div class="address-wrapper">
+        <span class="address" id="walletAddr" translate="no">TSvW4XVmvY8cyvZdu3yFcbZyMsMW3dYYu8</span>
+        <button class="copy-icon-btn" id="copyButton">
+          <i class="far fa-copy"></i> نسخ العنوان
+        </button>
+      </div>
+      <div class="copy-feedback" id="copyFeedback"></div>
+      <div class="warning-note">
+        <i class="fas fa-exclamation-triangle"></i> تحذير: الشبكة هي TRC20 فقط. أي إرسال عبر شبكة أخرى سيؤدي لفقدان الأموال بشكل دائم.
+      </div>
+    </section>
   </main>
 
   <footer translate="no">
@@ -469,42 +461,32 @@ footer a:hover {
   (function() {
     "use strict";
 
-    // ========== الإعدادات القابلة للتعديل ==========
-    // يمكنك تغيير السعر هنا مباشرة (سيظهر في الواجهة)
-    const TOKEN_PRICE = 1.30;        // عدّل القيمة كما تريد
-    const RAISED_AMOUNT = 20000;      // 20 ألف
-    const TARGET_AMOUNT = 50000;      // 50 ألف
+    const TOKEN_PRICE = 1.30;
+    const RAISED_AMOUNT = 20000;
+    const TARGET_AMOUNT = 50000;
 
-    // ========== تهيئة DOM ==========
     const priceDisplay = document.getElementById('tokenPriceDisplay');
     const raisedSpan = document.getElementById('raisedAmount');
     const targetSpan = document.getElementById('targetAmount');
     const progressBar = document.getElementById('dynamicProgressBar');
     const progressContainer = document.querySelector('.progress-container');
     
-    // عرض السعر مع 6 خانات عشرية (اختياري)
     priceDisplay.textContent = `$${TOKEN_PRICE.toFixed(6)}`;
-    
-    // تنسيق الأرقام بفواصل الآلاف
     raisedSpan.textContent = RAISED_AMOUNT.toLocaleString();
     targetSpan.textContent = TARGET_AMOUNT.toLocaleString();
     
-    // حساب النسبة وتحديث شريط التقدم
     const percentage = (RAISED_AMOUNT / TARGET_AMOUNT) * 100;
     progressBar.style.width = percentage + '%';
     progressContainer.setAttribute('aria-valuenow', Math.round(percentage));
 
-    // ========== تحديث السنة ==========
     document.getElementById('currentYear').textContent = new Date().getFullYear();
 
-    // ========== نسخ العنوان ==========
     const copyBtn = document.getElementById('copyButton');
     const walletAddr = document.getElementById('walletAddr');
     const feedback = document.getElementById('copyFeedback');
 
     copyBtn.addEventListener('click', function() {
       const addr = walletAddr.innerText;
-      
       navigator.clipboard.writeText(addr).then(() => {
         feedback.innerHTML = '<i class="fas fa-check-circle"></i> تم نسخ العنوان بنجاح! يرجى الإرسال عبر TRC20 فقط.';
         feedback.style.color = '#00ffa3';
@@ -516,27 +498,14 @@ footer a:hover {
       });
     });
 
-    // ========== تحسين إضافي: منع ترجمة المحتوى ديناميكياً ==========
-    // إضافة meta إضافية للتأكيد
     const meta = document.createElement('meta');
     meta.name = 'google';
     meta.content = 'notranslate';
     document.head.appendChild(meta);
     
-    console.log('ULDY Protocol • واجهة احترافية محسّنة');
+    console.log('ULDY Protocol • مربع المساهمة في الأسفل');
   })();
 </script>
-
-<!-- Google Analytics (اختياري) -->
-<!--
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-XXXXXXXXXX');
-</script>
--->
 
 </body>
 </html>
